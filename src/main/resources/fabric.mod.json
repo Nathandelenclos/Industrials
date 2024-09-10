@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "industrials",
+  "version": "${version}",
+  "name": "Industrials",
+  "description": "Industrials mod Minecraft by Nather",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/industrials/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.nather.industrials.client.IndustrialsClient"
+    ],
+    "main": [
+      "com.nather.industrials.Industrials"
+    ]
+  },
+  "mixins": [
+    "industrials.mixins.json",
+    {
+      "config": "industrials.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
